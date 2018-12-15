@@ -21,10 +21,10 @@ http.get(`${urlPosts}/1`, function (err, response) {
 });
 */
 // Create Data
-const data = {
+/*const data = {
   title: 'Custom Post',
   body: 'This is a custom post'
-};
+};*/
 
 /*// Create Post
 http.post(urlPosts, data, function (err, post) {
@@ -36,10 +36,20 @@ http.post(urlPosts, data, function (err, post) {
 });*/
 
 // Update Post
+/*
 http.put(`${urlPosts}/1`, data, function (err, post) {
     if (err) {
         console.log(err);
     } else {
         console.log(post);
+    }
+});*/
+
+// Delete Post
+http.delete(`${urlPosts}/1`, function (err, response) {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(response);
     }
 });
