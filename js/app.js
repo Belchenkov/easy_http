@@ -20,15 +20,23 @@ http.get(`${urlPosts}/1`, function (err, response) {
     }
 });
 */
-
 // Create Data
 const data = {
   title: 'Custom Post',
   body: 'This is a custom post'
 };
 
-// Create Post
+/*// Create Post
 http.post(urlPosts, data, function (err, post) {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(post);
+    }
+});*/
+
+// Update Post
+http.put(`${urlPosts}/1`, data, function (err, post) {
     if (err) {
         console.log(err);
     } else {
