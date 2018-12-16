@@ -34,5 +34,5 @@ http.put(`${urlUsers}/1`, data)
 http.delete(`${urlUsers}/1`, data)
     .then(data => console.log(data))
     .catch(err => console.error(err));
-*/
 
+*/
