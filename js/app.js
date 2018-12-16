@@ -1,55 +1,38 @@
-const http = new easyHTTP();
-const urlPosts = 'https://jsonplaceholder.typicode.com/posts';
+const http = new EasyHTTP();
+const urlUsers = 'https://jsonplaceholder.typicode.com/users';
 
-// Get Posts
-/*http.get(urlPosts, function (err, response) {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log(response);
-    }
-});*/
+// Get Users
+http.get(urlUsers)
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
 
-// Get Single Post
+// User Data
 /*
-http.get(`${urlPosts}/1`, function (err, response) {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log(response);
-    }
-});
+const data = {
+    name: 'John Doe',
+    username: 'johndoe',
+    email: 'jdoe@gmail.com'
+};
 */
-// Create Data
-/*const data = {
-  title: 'Custom Post',
-  body: 'This is a custom post'
-};*/
 
-/*// Create Post
-http.post(urlPosts, data, function (err, post) {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log(post);
-    }
-});*/
-
-// Update Post
+// Create User
 /*
-http.put(`${urlPosts}/1`, data, function (err, post) {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log(post);
-    }
-});*/
+http.post(urlUsers, data)
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
+*/
 
-// Delete Post
-http.delete(`${urlPosts}/1`, function (err, response) {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log(response);
-    }
-});
+// Update User
+/*
+http.put(`${urlUsers}/1`, data)
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
+*/
+
+// Delete User
+/*
+http.delete(`${urlUsers}/1`, data)
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
+*/
+
